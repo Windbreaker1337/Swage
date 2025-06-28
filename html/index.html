@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <script src="/js/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img src="/image/logo.png" alt=""></div>
+        <nav class="menu">
+            <button id="addMusic">Добавить музыку</button>
+            <button id="createPlayList">Создать плейлист</button>
+            <div class="modalCreatePlayList"></div>
+            <button id="reportBug">Сообщить об ошибке</button>
+        </nav>
+        <div class="avatar">
+            <img src="/image/deflautAvatar.png" alt="" id="avatar">
+            <div class="modalAvatar">
+                <button id="changeAvatar" onclick="document.getElementById('changeInpAvatar').click()">Сменить
+                    аватар</button>
+                <button id="changePassword">Сменить пароль</button>
+                <div class=" modalChangePassword">
+                    <span>Введите старый пароль</span>
+                    <input type="password" name="" id="oldPassword">
+                    <span>Введите новый пароль</span>
+                    <input type="password" name="" id="newPassword">
+                    <button>Потвердить</button>
+                </div>
+                <button id="changeLogin">Сменить логин</button>
+                <div class="modalChangeName">
+                    <input type="text" name="changeLogin" id="changeLoginInp">
+                    <button id="saveChangeLogin">Сохранить</button>
+                </div>
+                <button id="changeEmail">Сменить почту</button>
+                <div class="modalChangeEmail">
+                    <span>Потвредите старую почту</span>
+                    <input type="text" id="confirmOldEmail">
+                    <span>Введите новую почту</span>
+                    <input type="email" name="" id="">
+                    <button>Потвердить</button>
+                </div>
+                <button id="logOut">Выйти</button>
+                <button id="deleteAccount">Удалить аккаунт</button>
+                <input type="file" name="avatar" id="changeInpAvatar" accept="image/*">
+            </div>
+        </div>
+    </header>
+    <audio src="" id="myPlayer"></audio>
+
+    <main>
+        <div class="track-info" >
+            <h2 id="trackTitle">Название трека</h2>
+            <p id="trackDuration">0:00 / 0:00</p>
+            <input type="range" id="progressBar" value="0" min="0" max="100">
+            <div class="player-controls">
+                <button id="prevTrack"><img src="/image/icons8-назад-50.png" alt="Назад"></button>
+                <button id="playPause"><img src="/image/icons8-square-play-button-48.png" alt="Воспроизвести"></button>
+                <button id="nextTrack"><img src="/image/icons8-вперед-50.png" alt="Вперёд"></button>
+            </div>
+        </div>
+        <div class="allMusicUser">
+
+        </div>
+    </main>
+    <input type="file" id="musicInput" accept="audio/*">
+</body>
+
+</html>
